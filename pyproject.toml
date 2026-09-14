@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "critic-model-poc"
+version = "0.1.0"
+description = "Model-agnostic trajectory critic training and Alpamayo 1.5 adapter"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["numpy>=2.2,<3", "torch>=2.8,<2.9"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4,<9", "ruff>=0.12,<0.13", "build>=1.2,<2"]
+
+[project.scripts]
+critic-poc = "critic_poc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

@@ -1,0 +1,13 @@
+{
+  "scene_id": "030c760c-ae38-49aa-9ad8-f5650a545d26:5100000",
+  "t0_us": 5100000,
+  "frame": "ego_t0",
+  "observation_complete": false,
+  "lane_half_width": null,
+  "agents": [],
+  "ego": {
+    "length": 4.8,
+    "width": 2.0,
+    "desired_speed": 8.0
+  }
+}
